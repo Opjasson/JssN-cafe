@@ -1,11 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Page from '../components/Page'
 
 function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Navbar />
+      <Page />
       <Footer />
     </div>
   )

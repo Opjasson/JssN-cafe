@@ -2,18 +2,18 @@ import React from "react";
 
 function Footer() {
     return (
-        <div className="w-3/4 bg-slate-100 relative left-[341px]">
+        <div className="w-3/4 bg-slate-200 relative left-[338px]">
             <div className="flex flex-wrap">
-                <div className="border p-5">
+                <div className="p-5">
                     <img className="h-10" src="../img/logo.png" alt="" />
                     <h1>OPENING HOURS</h1>
                     <p>Monday - Sunday : 06.00 AM - 10.00 PM</p>
                 </div>
-                <div className="border p-5">
+                <div className="p-5">
                     <h1 className="text-xl font-bold">RECENT POST</h1>
                     <a href="">FOLLOW THIS LINK TO SEE POST</a>
                 </div>
-                <div className="border p-5 flex flex-col gap-3">
+                <div className="p-5 flex flex-col gap-3">
                     <h1 className="text-xl font-bold">CONTACT INFO</h1>
                     <div className="flex items-center w-[360px] gap-1">
                         <img
@@ -43,7 +43,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <footer className="bg-slate-400">&copy;copyright by jasson</footer>
+            <footer className="bg-[#434868] p-3 text-white font-bold ">&copy;COPYRIGHT JSSN-CAFE. WEBSITE BY : AZMIASYROF</footer>
         </div>
     );
 }
