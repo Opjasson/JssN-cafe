@@ -1,14 +1,13 @@
-import React from 'react'
-import '../../Slider.css'
+import React from "react";
 
-function Slider() {
-  return (
-    <div className='list'>
-      <div className='item'>
-            <img className='h-96' src="../img/pamflet.jpg" alt="banner1" />
-      </div>
-    </div>
-  )
+
+function Slider(props) {
+  const { src, variant } = props
+    return (
+        <div>
+            <img className={variant} src={src} alt="banner1" />
+        </div>
+    );
 }
 
-export default Slider
+export default Slider;

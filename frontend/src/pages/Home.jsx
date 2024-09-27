@@ -5,7 +5,7 @@ import Page from '../components/Page'
 
 function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden relative">
       <Navbar />
       <Page />
       <Footer />
