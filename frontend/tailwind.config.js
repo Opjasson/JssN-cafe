@@ -9,7 +9,11 @@ export default {
       'Averia' : ['Averia Serif Libre'],
       'Courgette' : ['Courgette']
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': 'url(../img/menu.jpg)',
+      },
+    },
   },
   plugins: [],
 }

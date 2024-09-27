@@ -8,7 +8,7 @@ function Navbar() {
             <img className="h-10 border" src="../img/logo.png" alt="" />
             <div className="flex flex-col gap-3 text-xl mb-8 mt-5">
                 <NavLink to={"/"}>HOME</NavLink>
-                <NavLink>MENU</NavLink>
+                <NavLink to={"/menu"}>MENU</NavLink>
                 <NavLink>IN ROOM DINNING</NavLink>
                 <NavLink>GALLERY</NavLink>
                 <NavLink>WHERE TO FIND US</NavLink>
