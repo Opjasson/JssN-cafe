@@ -18,8 +18,10 @@ app.use(express.json())
 
 app.use("/menu", routerMenu)
 
-app.listen(3000, () => {
-    console.log(`Running on port http://localhost:${PORT}`)
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`Running on port http://localhost:${port}`)
 }).on("error", (err) => {
     console.error(err)
 })
