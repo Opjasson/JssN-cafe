@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Button from "./elements/Button";
 import axios from "axios";
 
-function Pagemenu() {
+function Pagemenu(props) {
     const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
+   
 
+    
     const fetchData = async () => {
         try {
             const response = await axios.get("http://localhost:3000/menu");
@@ -24,13 +24,6 @@ function Pagemenu() {
         fetchData();
     }, []);
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-    if (error) {
-        return <p>Error: {error.message}</p>;
-    }
-
     return (
         <div className="relative left-[338px] w-3/4">
             <div className="h-96 bg-hero-pattern bg-cover bg-center"></div>
@@ -41,23 +34,40 @@ function Pagemenu() {
                 </span>
             </h1>
 
-            <div>
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
                 {data.map((item) => (
-                    <div className="w-64 border-2">
-                        <div className="h-48 w-[252px] border-2 border-black overflow-hidden">
-                            <img src={item.image} alt="" />
+                    <div className="w-64 border-2 shadow-xl">
+                        <div className="h-48 w-[252px] overflow-hidden">
+                            <img
+                                className="h-60 object-cover"
+                                src={item.image}
+                                alt=""
+                            />
                         </div>
                         <div className="p-3 flex flex-col gap-2">
-                            <h1 className="text-xl font-bold capitalize underline">{item.name}</h1>
-                            <p>{item.description}</p>
-                            <h2>{(item.price).toLocaleString('id-ID',{style:'currency',currency:'IDR'})}</h2>
-                            <Button variant="bg-blue-600 hover:bg-blue-700 hover:text-white">
+                            <h1 className="text-xl font-bold capitalize underline">
+                                {item.name}
+                            </h1>
+                            <p className="h-20">
+                                {item.description.substring(0, 65) + " ..."}
+                            </p>
+                            <h2>
+                                {item.price.toLocaleString("id-ID", {
+                                    style: "currency",
+                                    currency: "IDR",
+                                })}
+                            </h2>
+                            <Button
+                               
+                                variant="bg-blue-600 hover:bg-blue-700 hover:text-white">
                                 Order
                             </Button>
                         </div>
                     </div>
                 ))}
             </div>
+
+           
         </div>
     );
 }

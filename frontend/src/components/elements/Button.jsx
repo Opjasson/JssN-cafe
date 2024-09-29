@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function Button(props) {
-    const { children, variant="bg-slate-400"} = props
-  return (
-    <div>
-      <button className={`px-5 ${variant} rounded`}>
-        {children}
-      </button>
-    </div>
-  )
+    const { children, variant = "bg-slate-400", onClick= () => {}, type="button"} = props;
+    return (
+        <div>
+            <button type={type} onClick={onClick} className={`px-5 ${variant} rounded`}>{children}</button>
+        </div>
+    );
 }
 
-export default Button
+export default Button;

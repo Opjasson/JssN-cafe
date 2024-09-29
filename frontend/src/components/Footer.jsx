@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <div className="w-3/4 bg-slate-200 relative left-[338px]">
+        <div className="w-3/4 bg-slate-200 relative left-[338px] mt-5">
             <div className="flex flex-wrap">
                 <div className="p-5">
                     <img className="h-10" src="../img/logo.png" alt="" />
