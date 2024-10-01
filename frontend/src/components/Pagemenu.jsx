@@ -3,18 +3,44 @@ import Button from "./elements/Button";
 import axios from "axios";
 
 function Pagemenu(props) {
+    const { id } = props;
     const [data, setData] = useState([]);
-   
+    const [cart, setCart] = useState([
+        {
+            id: id,
+            qty: 1,
+        },
+    ]);
+    const [Totalprice, SettotalPrice] = useState(0);
 
-    
+    useEffect(() => {
+        setCart([
+            {
+                id: 1,
+                qty: 1,
+            },
+        ]);
+    }, []);
+
+    const handleCart = (id) => {
+        if (cart.find((item) => item.id === id)) {
+            setCart(
+                cart.map((item) =>
+                    item.id === id ? { ...item, qty: item.qty + 1 } : item
+                )
+            );
+        } else {
+            setCart([...cart, { id, qty: 1 }]);
+        }
+    };
+
     const fetchData = async () => {
         try {
             const response = await axios.get("http://localhost:3000/menu");
             const jsonData = await response.data.data;
             setData(jsonData);
-            console.log(jsonData);
         } catch (err) {
-            setError(err);
+            console.log(err);
         } finally {
             setLoading(false);
         }
@@ -23,6 +49,40 @@ function Pagemenu(props) {
     useEffect(() => {
         fetchData();
     }, []);
+
+    // menghitung total price
+    useEffect(() => {
+        const calculateTotalPrice = async () => {
+          const promises = cart.map(async (item) => {
+            const product = await data.find((produk) => produk.id === item.id);
+            return product.price * item.qty;
+          });
+          const sum = await Promise.all(promises)
+            .then((results) => results.reduce((acc, result) => acc + result, 0));
+          SettotalPrice(sum);
+        };
+        calculateTotalPrice();
+      }, [cart]);
+
+
+    // const asyncReduce = async (array, callback, initialValue) => {
+    //     let acc = initialValue;
+    //     for (const item of array) {
+    //       acc = await callback(acc, item);
+    //     }
+    //     return acc;
+    //   };
+      
+    //   useEffect(() => {
+    //     const calculateTotalPrice = async () => {
+    //       const sum = await asyncReduce(cart, async (acc, item) => {
+    //         const product = await data.find((produk) => produk.id === item.id);
+    //         return acc + product.price * item.qty;
+    //       }, 0);
+    //       SettotalPrice(sum);
+    //     };
+    //     calculateTotalPrice();
+    //   }, [cart]);
 
     return (
         <div className="relative left-[338px] w-3/4">
@@ -58,7 +118,7 @@ function Pagemenu(props) {
                                 })}
                             </h2>
                             <Button
-                               
+                                onClick={() => handleCart(item.id)}
                                 variant="bg-blue-600 hover:bg-blue-700 hover:text-white">
                                 Order
                             </Button>
@@ -67,7 +127,56 @@ function Pagemenu(props) {
                 ))}
             </div>
 
-           
+            <div className="max-w-max m-auto border">
+                <table>
+                    <thead>
+                        <tr className="text-left">
+                            <th className="w-56">makanan</th>
+                            <th className="w-32">Price</th>
+                            <th className="w-32">Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {cart.map((item) => {
+                            const findData = data.find(
+                                (product) => product.id === item.id
+                            );
+                            if (item.qty)
+                                if (findData) {
+                                    return (
+                                        <tr>
+                                            <td className="w-56">
+                                                {findData.name}
+                                            </td>
+                                            <td className="w-32">
+                                                {findData.price}
+                                            </td>
+                                            <td className="w-32">{item.qty}</td>
+                                            <td>{findData.price * item.qty}</td>
+                                        </tr>
+                                    );
+                                } else {
+                                    return null;
+                                }
+                        })}
+
+                        <tr>
+                            <td colSpan={3}>
+                                <b>Total Price</b>
+                            </td>
+                            <td>
+                                <b>
+                                    {Totalprice.toLocaleString("id-ID", {
+                                        style: "currency",
+                                        currency: "IDR",
+                                    })}
+                                </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }

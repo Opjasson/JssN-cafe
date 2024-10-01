@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home.jsx';
 import Menu from './pages/Menu.jsx';
+import Room from './pages/Room.jsx';
+import Gallery from './pages/Gallery.jsx';
+import Findus from './pages/Findus.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,18 @@ const router = createBrowserRouter([
   {
     path : "/menu",
     element : <Menu />
+  },
+  {
+    path : "/room",
+    element : <Room />
+  },
+  {
+    path : "/gallery",
+    element : <Gallery />
+  },
+  {
+    path : "/findus",
+    element : <Findus />
   }
 ])
 

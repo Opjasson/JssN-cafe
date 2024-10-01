@@ -12,6 +12,9 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': 'url(../img/menu.jpg)',
+        'room-pattern' : 'url(../img/room1.jpg)',
+        'gallery-patter' : 'url(../img/menu2.jpg)',
+        'room-pattern2' : 'url(../img/restaurant2.jpg)'
       },
     },
   },

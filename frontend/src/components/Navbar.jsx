@@ -9,9 +9,9 @@ function Navbar() {
             <div className="flex flex-col gap-3 text-xl mb-8 mt-5">
                 <NavLink to={"/"}>HOME</NavLink>
                 <NavLink to={"/menu"}>MENU</NavLink>
-                <NavLink>IN ROOM DINNING</NavLink>
-                <NavLink>GALLERY</NavLink>
-                <NavLink>WHERE TO FIND US</NavLink>
+                <NavLink to={"/room"}>IN ROOM DINNING</NavLink>
+                <NavLink to={"/gallery"}>GALLERY</NavLink>
+                <NavLink to={"/findus"}>WHERE TO FIND US</NavLink>
                 <NavLink>PROMO</NavLink>
             </div>
             <Link className="px-5 py-3 border-2 border-slate-400 hover:bg-slate-400 hover:text-white">
