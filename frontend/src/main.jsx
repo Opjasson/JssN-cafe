@@ -10,6 +10,7 @@ import Menu from './pages/Menu.jsx';
 import Room from './pages/Room.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Findus from './pages/Findus.jsx';
+import Promo from './pages/Promo.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path : "/findus",
     element : <Findus />
+  },
+  {
+    path : "/promo",
+    element : <Promo />
   }
 ])
 

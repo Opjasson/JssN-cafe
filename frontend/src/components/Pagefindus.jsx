@@ -35,39 +35,39 @@ function Pagefindus() {
                     </div>
             </div>
 
-            <div className="flex justify-center mt-10">
-                <div className="w-72 border-2 text-center">
-                    <h1>OPENING HOURS</h1>
-                    <table>
+            <div className="flex justify-center mt-10 gap-3 border-b-4 border-slate-700 pb-10">
+                <div className="w-96 text-center bg-slate-400 p-5 rounded-md">
+                    <h1 className="text-3xl mb-8 border-b-2 border-dotted">OPENING HOURS</h1>
+                    <table className="w-full">
                         <tr>
-                            <th className="w-40">Open</th>
+                            <th>Open</th>
                             <th>06.00 AM</th>
                         </tr>
                         <tr>
-                            <th className="w-40">Close</th>
+                            <th>Close</th>
                             <th>09.00 PM</th>
                         </tr>
                         <tr>
-                            <th className="w-40">Last Order</th>
+                            <th>Last Order</th>
                             <th>09.00 PM</th>
                         </tr>
                     </table>
                 </div>
 
-                <div className="w-72 border-2 text-center">
-                    <h1>OPENING HOURS</h1>
-                    <table>
+                <div className="w-96 text-center bg-slate-300 p-5 rounded-md">
+                    <h1 className="text-3xl mb-8 border-b-2 border-dotted border-slate-400">SCHEDULE</h1>
+                    <table className="w-full">
                         <tr>
-                            <th className="w-40">Open</th>
-                            <th>06.00 AM</th>
+                            <th>Breakfast</th>
+                            <th>06.00 AM - 10.30 AM</th>
                         </tr>
                         <tr>
-                            <th className="w-40">Close</th>
-                            <th>09.00 PM</th>
+                            <th>Lunch</th>
+                            <th>12.00 PM - 03.00 PM</th>
                         </tr>
                         <tr>
-                            <th className="w-40">Last Order</th>
-                            <th>09.00 PM</th>
+                            <th>Dinner</th>
+                            <th>06.00 PM - 10.00 PM</th>
                         </tr>
                     </table>
                 </div>

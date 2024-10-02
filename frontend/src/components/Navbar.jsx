@@ -12,7 +12,7 @@ function Navbar() {
                 <NavLink to={"/room"}>IN ROOM DINNING</NavLink>
                 <NavLink to={"/gallery"}>GALLERY</NavLink>
                 <NavLink to={"/findus"}>WHERE TO FIND US</NavLink>
-                <NavLink>PROMO</NavLink>
+                <NavLink to={"/promo"}>PROMO</NavLink>
             </div>
             <Link className="px-5 py-3 border-2 border-slate-400 hover:bg-slate-400 hover:text-white">
                 RESERVATIONS
