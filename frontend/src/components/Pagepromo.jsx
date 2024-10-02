@@ -44,19 +44,19 @@ function Pagepromo() {
                 </span>
             </h1>
 
-            <div className="border-2">
+            <div className="border-2 ml-5">
                 {data.map((item) => (
-                    <div className="text-3xl text-black" key={item.id}>
-                        <div className="">
-                            <h1>{item.judul}</h1>
-                            <p>
+                    <div className="text-3xl text-black w-1/2 border-2 bg-slate-200 p-5 rounded-lg" key={item.id}>
+                        <div className="text-lg font-bold">
+                            <h1 className="text-2xl font-Averia">{item.judul.substring(0, 40)+"..."}</h1>
+                            <p className="text-sm font-light tracking-wide ">
                                 {item.publish} | JssN-Cafe |{" "}
-                                <a href="">Read more</a>
+                                <a href="" className="border-none text-red-600">Read more</a>
                             </p>
                         </div>
 
-                        <img className="h-96" src={item.image} alt="" />
-                        <p>{item.isi}</p>
+                        <img className="h-96 w-full object-cover" src={item.image} alt="" />
+                        <p className="text-lg">{item.isi}</p>
                     </div>
                 ))}
             </div>
