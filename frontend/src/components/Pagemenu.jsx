@@ -96,7 +96,7 @@ function Pagemenu(props) {
 
             <div className="flex flex-wrap justify-center gap-3 mb-8">
                 {data.map((item) => (
-                    <div className="w-64 border-2 shadow-xl">
+                    <div className="w-64 border-2 shadow-xl" key={item.id}>
                         <div className="h-48 w-[252px] overflow-hidden">
                             <img
                                 className="h-60 object-cover"

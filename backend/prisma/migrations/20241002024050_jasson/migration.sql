@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Blog` MODIFY `isi` VARCHAR(191) NULL;
