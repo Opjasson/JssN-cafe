@@ -6,6 +6,7 @@ import cors from "cors";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import routerMenu from "./routers/menuRoute.js";
 import routeBlog from "./routers/blogRoute.js";
+import routeAuth from "./routers/authRoute.js";
 
 const menu = new PrismaClient().menu;
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.json())
 
 app.use("/menu", routerMenu)
 app.use("/blog", routeBlog)
+app.use("/user", routeAuth)
 
 const port = 3000;
 
