@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Button from "./elements/Button";
+import Button from "./elements/button/Button";
 
 function Navbar() {
     return (

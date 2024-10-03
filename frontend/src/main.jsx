@@ -11,6 +11,7 @@ import Room from './pages/Room.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Findus from './pages/Findus.jsx';
 import Promo from './pages/Promo.jsx';
+import Login from './pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path : "/promo",
     element : <Promo />
+  },
+  {
+    path : "/login",
+    element : <Login />
   }
 ])
 

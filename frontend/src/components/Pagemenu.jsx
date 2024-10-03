@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from "./elements/Button";
+import Button from "./elements/button/Button";
 import axios from "axios";
 
 function Pagemenu(props) {
@@ -53,17 +53,19 @@ function Pagemenu(props) {
     // menghitung total price
     useEffect(() => {
         const calculateTotalPrice = async () => {
-          const promises = cart.map(async (item) => {
-            const product = await data.find((produk) => produk.id === item.id);
-            return product.price * item.qty;
-          });
-          const sum = await Promise.all(promises)
-            .then((results) => results.reduce((acc, result) => acc + result, 0));
-          SettotalPrice(sum);
+            const promises = cart.map(async (item) => {
+                const product = await data.find(
+                    (produk) => produk.id === item.id
+                );
+                return product.price * item.qty;
+            });
+            const sum = await Promise.all(promises).then((results) =>
+                results.reduce((acc, result) => acc + result, 0)
+            );
+            SettotalPrice(sum);
         };
         calculateTotalPrice();
-      }, [cart]);
-
+    }, [cart]);
 
     // const asyncReduce = async (array, callback, initialValue) => {
     //     let acc = initialValue;
@@ -72,7 +74,7 @@ function Pagemenu(props) {
     //     }
     //     return acc;
     //   };
-      
+
     //   useEffect(() => {
     //     const calculateTotalPrice = async () => {
     //       const sum = await asyncReduce(cart, async (acc, item) => {
