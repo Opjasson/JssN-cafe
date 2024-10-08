@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import Form from "./elements/input/Form";
 import Button from "./elements/button/Button";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Formregis() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [user, setUser] = useState([]);
+    const navigate = useNavigate();
 
     const createUser = async () => {
         try {
@@ -15,23 +17,22 @@ function Formregis() {
                 user
             );
             console.log(response);
+            navigate('/login')
         } catch (error) {
             console.log(error);
         }
     };
 
-    useEffect(()=>{
-        createUser()
-    },[user])
+    useEffect(() => {
+        createUser();
+    }, [user]);
 
     const handleRegis = (username, password) => {
-        setUser(
-            {
-                "username": username,
-                "password": password,
-            },
-        );
-        console.log(user)
+        setUser({
+            username: username,
+            password: password,
+        });
+        console.log(user);
     };
     return (
         <div>
@@ -48,7 +49,7 @@ function Formregis() {
                     label="password"
                     children="password"
                     placeholder="*******"
-                    type="text"
+                    type="password"
                     name="password"
                     onChange={(a) => setPassword(a.target.value)}
                 />
