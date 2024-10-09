@@ -44,9 +44,9 @@ function Pagepromo() {
                 </span>
             </h1>
 
-            <div className="border-2 ml-5">
+            <div className=" ml-5">
                 {data.map((item) => (
-                    <div className="text-3xl text-black w-1/2 border-2 bg-slate-200 p-5 rounded-lg" key={item.id}>
+                    <div className="text-3xl text-black w-1/2  bg-slate-200 p-5 rounded-lg" key={item.id}>
                         <div className="text-lg font-bold">
                             <h1 className="text-2xl font-Averia">{item.judul.substring(0, 40)+"..."}</h1>
                             <p className="text-sm font-light tracking-wide ">

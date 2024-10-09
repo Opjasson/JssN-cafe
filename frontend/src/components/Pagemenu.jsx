@@ -20,7 +20,7 @@ function Pagemenu(props) {
                 qty: 1,
             },
         ]);
-    }, []);
+    },[]);
 
     const handleCart = (id) => {
         if (cart.find((item) => item.id === id)) {
@@ -98,8 +98,8 @@ function Pagemenu(props) {
 
             <div className="flex flex-wrap justify-center gap-3 mb-8">
                 {data.map((item) => (
-                    <div className="w-64 border-2 shadow-xl" key={item.id}>
-                        <div className="h-48 w-[252px] overflow-hidden">
+                    <div className="w-64 bg-slate-200 shadow-xl" key={item.id}>
+                        <div className="h-48 w-[256px] overflow-hidden">
                             <img
                                 className="h-60 object-cover"
                                 src={item.image}
@@ -129,7 +129,7 @@ function Pagemenu(props) {
                 ))}
             </div>
 
-            <div className="max-w-max m-auto border">
+            <div className="max-w-max m-auto">
                 <table>
                     <thead>
                         <tr className="text-left">
