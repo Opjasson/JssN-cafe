@@ -31,3 +31,11 @@ model User {
     username String
     password String
 }
+
+model Reservation {
+    id Int @id @default(autoincrement())
+    name String
+    menu String @db.Text
+    date DateTime @updatedAt
+    table Int
+}

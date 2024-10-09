@@ -13,6 +13,7 @@ import Findus from './pages/Findus.jsx';
 import Promo from './pages/Promo.jsx';
 import Login from './pages/Login.jsx';
 import Regis from './pages/Regis.jsx';
+import Reserv from './pages/Reserv.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path : "/regis",
     element : <Regis />
+  },
+  {
+    path : "/reservation",
+    element : <Reserv />
   }
 ])
 

@@ -14,7 +14,7 @@ function Navbar() {
                 <NavLink to={"/findus"}>WHERE TO FIND US</NavLink>
                 <NavLink to={"/promo"}>PROMO</NavLink>
             </div>
-            <Link className="px-5 py-3 border-2 border-slate-400 hover:bg-slate-400 hover:text-white">
+            <Link to={"/reservation"} className="px-5 py-3 border-2 border-slate-400 hover:bg-slate-400 hover:text-white">
                 RESERVATIONS
             </Link>
 
