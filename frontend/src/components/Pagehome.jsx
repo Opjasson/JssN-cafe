@@ -4,8 +4,8 @@ import Slider from "./elements/slider/Slider";
 function Pagehome() {
     return (
         <div className="relative left-[338px] w-3/4">
-            <Slider variant="w-full" src="../img/pamflet2.jpg" />
-            <div className="flex flex-col items-center text-xl font-bold mt-5 gap-5">
+            <Slider variant="w-full h-[40rem] object-cover" src="../img/promoList.jpg" />
+            <div className="flex flex-col object items-center text-xl font-bold mt-5 gap-5">
                 <h1 className="w-96 text-center font-Averia font-light">
                     INTERNTIONAL CULINARY DELIGHT OFFERS TANTALIZING TASTE
                 </h1>
@@ -47,7 +47,7 @@ function Pagehome() {
             </div>
 
             <div className="text-center relative mb-16 flex">
-                <div className="border-2 h-96 overflow-hidden ">
+                <div className=" h-96 overflow-hidden ">
                     <Slider src="../img/restaurant.jpg" />
                 </div>
                 <h1 className="text-3xl font-Averia text-white w-96 border-2 border-black m-auto absolute top-80 left-[316px]">
