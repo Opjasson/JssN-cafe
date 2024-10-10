@@ -55,7 +55,7 @@ function Formregis() {
                 />
                 <Button
                     onClick={() => handleRegis(username, password)}
-                    variant="bg-blue-400 mt-3 hover:bg-blue-500 hover:text-white">
+                    variant="bg-green-400 mt-3 hover:bg-blue-500 hover:text-white">
                     Kirim
                 </Button>
             </form>

@@ -104,10 +104,10 @@ function PageReserv() {
                             onChange={(e)=>setTable(parseInt(e.target.value))}
                             id="set-table"
                             placeholder="Jhony dan keluarga(+ Jumlah orang)"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 ml- dark:focus:border-blue-500"
+                            className="bg-gray-50 border ml-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 ml- dark:focus:border-blue-500"
                         />
                     </div>
-                    <Button type="submit" variant="px-32 ml-40 bg-red-800 hover:bg-red-900 hover:text-white">Kirim</Button>
+                    <Button type="submit" variant="px-36 ml-36 bg-red-800 hover:bg-red-900 hover:text-white">Kirim</Button>
                 </form>
             </div>
         </div>

@@ -28,7 +28,7 @@ function Navbar() {
                     <h1 className="text-xl font-bold">LOCATION</h1>
                 </div>
                 <p>
-                    JALAN MEJASEM BARU 4 NO.45 KABUPATEN TEGAL,KECAMATAN KRAMAT
+                    JALAN NEWZEALAND BARU 4 NO.45 KABUPATEN TRENGALEG,KECAMATAN KRAMAT
                 </p>
             </div>
         </nav>

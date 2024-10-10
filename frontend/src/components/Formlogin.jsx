@@ -77,7 +77,7 @@ function Formlogin() {
                     // onClick={() => handleLogin(username, password)}
                     type="submit"
                     variant="bg-blue-400 mt-3 hover:bg-blue-500 hover:text-white">
-                    Kirim
+                    Login
                 </Button>
             </form>
         </div>

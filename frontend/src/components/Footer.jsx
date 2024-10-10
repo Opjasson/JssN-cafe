@@ -22,8 +22,7 @@ function Footer() {
                             alt="Location"
                         />
                         <p>
-                            JALAN MEJASEM BARU 4 NO.45 KABUPATEN TEGAL,KECAMATAN
-                            KRAMAT
+                        JALAN NEWZEALAND BARU 4 NO.45 KABUPATEN TRENGALEG,KECAMATAN KRAMAT
                         </p>
                     </div>
 
@@ -34,7 +33,7 @@ function Footer() {
 
                     <div className="flex items-center gap-1">
                         <img className="h-8" src="../img/email.png" alt="" />
-                        <h1>JssN_Cafe@gmail.com</h1>
+                        <h1>azmitheusos333@gmail.com</h1>
                     </div>
 
                     <div className="flex items-center gap-1">
